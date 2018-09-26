@@ -9,3 +9,9 @@
     cd my-project
     npm install
     comm-cli --serve
+
+### License
+
+MIT
+
+You can use this project to do whatever you want, but I'm not responsible for the consequences.
