@@ -15,8 +15,6 @@
     "author": "大漠穷秋",
     "license": "MIT",
     "dependencies": {
-        "command-line-args": "^5.0.2",
-        "command-line-usage": "^5.0.5",
         "commander": "^2.18.0"
     }
 }
