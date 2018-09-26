@@ -1,0 +1,21 @@
+{
+    "name": "common-cli",
+    "version": "1.0.0",
+    "description": "如何编写自己的cli工具",
+    "main": "index.js",
+    "bin": {
+        "common-cli": "./index.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "cli"
+    ],
+    "author": "大漠穷秋",
+    "license": "MIT",
+    "dependencies": {
+        "command-line-args": "^5.0.2",
+        "command-line-usage": "^5.0.5"
+    }
+}
