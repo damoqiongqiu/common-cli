@@ -18,4 +18,4 @@ common-cli可以缩写成common，或者使用别名fish-cli，或者fish，都�
 
 MIT
 
-You can use this project to do whatever you want, but I'm not responsible for any consequences.
+You can use this project whatever you want, but I'm not responsible for any consequences.
