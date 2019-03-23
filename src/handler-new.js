@@ -1,3 +1,7 @@
+/**
+ * @author 大漠穷秋
+ * 创建项目
+ */
 const simpleGit = require("simple-git")("./");
 //TODO:移动到配置文件里面去
 const repoURL = "https://gitee.com/mumu-osc/react_webpack_starter.git";
@@ -7,8 +11,7 @@ function gitClone(dirName) {
     simpleGit.clone(repoURL, dirName, "-b", "12-mobx");
 }
 
-module.exports = function(dirName) {
-    console.log("开始创建项目模板>" + dirName);
+module.exports = function (dirName) {
     if (!dirName) {
         return;
     }
