@@ -15,8 +15,14 @@ commander
     .command("new <dir>")
     .alias("n")
     .description("创建项目")
-    .action(function (cmd, options) {
-        newHandler(cmd);
+    .option("-a,--Angular", "使用Angular框架")
+    .option("-r,--React", "使用React框架")
+    .action(function (dir, options) {
+        let framework = "Angular";
+        if (options.React) {
+            framework = "React";
+        }
+        newHandler(dir, framework);
     });
 
 commander

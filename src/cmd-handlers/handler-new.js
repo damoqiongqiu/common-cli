@@ -3,18 +3,25 @@
  * 创建项目
  */
 const simpleGit = require("simple-git")("./");
-//TODO:移动到配置文件里面去
-const repoURL = "https://gitee.com/mumu-osc/react_webpack_starter.git";
+const AngularTemplateURL = "https://gitee.com/mumu-osc/NiceFish.git";
+const ReactTemplateURL = "https://gitee.com/mumu-osc/NiceFish-React.git";
 
-//从仓库克隆一个模板项目
-function gitClone(dirName) {
-    simpleGit.clone(repoURL, dirName, "-b", "12-mobx");
+function gitClone(dirName, framework) {
+    let templateURL = AngularTemplateURL;
+    if (framework == 'Angular') {
+        templateURL = AngularTemplateURL;
+    } else if (framework == 'React') {
+        templateURL = ReactTemplateURL;
+    } else {
+        throw new Error("不存在指定的框架模板...");
+    }
+    console.log(`开始拉取模板项目，使用${framework}框架，项目路径：${templateURL}`);
+    simpleGit.clone(templateURL, dirName);
 }
 
-module.exports = function (dirName) {
+module.exports = function (dirName, framework) {
     if (!dirName) {
         return;
     }
-    // TODO:对项目名称进行校验，不符合规则直接报错退出
-    gitClone(dirName);
+    gitClone(dirName, framework);
 };
