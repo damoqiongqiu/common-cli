@@ -3,9 +3,9 @@
  * 主入口，接受命令行参数
  */
 const commander = require("commander");
-const newHandler = require("./handler-new");
-const buildHandler = require("./handler-build");
-const serveHandler = require("./handler-serve");
+const newHandler = require("./cmd-handlers/handler-new");
+const buildHandler = require("./cmd-handlers/handler-build");
+const serveHandler = require("./cmd-handlers/handler-serve");
 
 commander
     .version("Common/Fish CLI: 1.0.1")
