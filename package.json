@@ -4,7 +4,10 @@
     "description": "示范如何编写自己的cli工具",
     "main": "index.js",
     "bin": {
-        "common-cli": "./index.js"
+        "common-cli": "./index.js",
+        "common": "./index.js",
+        "fish-cli": "./index.js",
+        "fish": "./index.js"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +18,7 @@
     "author": "大漠穷秋",
     "license": "MIT",
     "dependencies": {
-        "commander": "2.18.0",
+        "commander": "2.19.0",
         "shelljs": "0.8.2",
         "simple-git": "1.102.0"
     }

@@ -8,16 +8,31 @@ const buildHandler = require("./handler-build");
 const serveHandler = require("./handler-serve");
 
 commander
-    .version("Common CLI: 1.0.0")
-    .option("-n, --new <name>", "new project")
-    .option("-b, --build", "build project")
-    .option("-s, --serve", "run project")
-    .parse(process.argv);
+    .version("Common/Fish CLI: 1.0.1")
+    .version("Common/Fish CLI: 1.0.1", '-v, --version')
 
-if (commander.new) newHandler(commander.new);
-if (commander.build) buildHandler(commander.build);
-if (commander.serve) serveHandler(commander.serve);
+commander
+    .command("new <dir>")
+    .alias("n")
+    .description("创建项目")
+    .action(function (cmd, options) {
+        newHandler(cmd);
+    });
 
-if (process.argv.length < 3) {
-    commander.help();
-}
+commander
+    .command("build")
+    .alias("b")
+    .description("构建项目")
+    .action(function (cmd, options) {
+        buildHandler();
+    });
+
+commander
+    .command("serve")
+    .alias("s")
+    .description("启动项目")
+    .action(function (cmd, options) {
+        serveHandler();
+    });
+
+commander.parse(process.argv);
